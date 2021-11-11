@@ -5,7 +5,7 @@ Router.get("/", (req, res) => {
   res.status(200).json(Products);
 });
 Router.get("/:id", (req, res) => {
-  const product = Products.filter((product) => product.id === req.params.id);
+  const product = Products.filter((product) => product.id == req.params.id);
   res.status(200).json(product);
 });
 
